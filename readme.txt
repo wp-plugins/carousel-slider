@@ -35,6 +35,10 @@ To get image from your WordPress Media, go to Media >> Library and click on imag
 
 `img_link='http://localhost/wp/plugins/wp-content/uploads/2014/06/vlcsnap-2014-06-08-14h31m10s128.png'`
 
+Here a complete example of code of ten carousel slider
+
+`[carousel][item img_link="http://lorempixel.com/400/200/sports/1"][item img_link="http://lorempixel.com/400/200/sports/2"][item img_link="http://lorempixel.com/400/200/sports/3"][item img_link="http://lorempixel.com/400/200/sports/4"][item img_link="http://lorempixel.com/400/200/sports/5"][item img_link="http://lorempixel.com/400/200/sports/6"][item img_link="http://lorempixel.com/400/200/sports/7"][item img_link="http://lorempixel.com/400/200/sports/8"][item img_link="http://lorempixel.com/400/200/sports/9"][item img_link="http://lorempixel.com/400/200/sports/10"][/carousel]`
+
 <h1>Features</h1>
 
 1. Fully Responsive 
