@@ -21,7 +21,9 @@ Or you can paste following to add carousel slider to your theme:
 
 `<?php echo do_shortcode('[all-carousels]'); ?>`
 
-If you want to use multiple carousel slider at diffrent page or post at your theme write the following code:
+If you want to use multiple carousel slider at diffrent page or post click on "Add Carousel Slider" button from WordPress visual editor [view screenshot](http://s.w.org/plugins/carousel-slider/screenshot-3.png?r=943201) and inside `img_link=''` put you image link.
+
+or write the following code:
 
 `[carousel][item img_link=""][/carousel]`
 
