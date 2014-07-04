@@ -25,7 +25,9 @@ If you want to use multiple carousel slider at diffrent page or post at your the
 
 `[carousel][item img_link=""][/carousel]`
 
-Repeat `[item img_link=""]` as many image as you want. Inside `img_link=''` put you image link like `img_link='http://lorempixel.com/400/200/sports/1'`
+Repeat `[item img_link=""]` as many image as you want. Inside `img_link=''` put you image link like 
+
+`img_link='http://lorempixel.com/400/200/sports/1'`
 
 <h1>Features</h1>
 
