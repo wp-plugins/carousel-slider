@@ -29,6 +29,10 @@ Repeat `[item img_link=""]` as many image as you want. Inside `img_link=''` put 
 
 `img_link='http://lorempixel.com/400/200/sports/1'`
 
+To get image from your WordPress Media, go to Media >> Library and click on image which one you want to insert and copy URL and paste it into `img_link=''` like this:
+
+`img_link='http://localhost/wp/plugins/wp-content/uploads/2014/06/vlcsnap-2014-06-08-14h31m10s128.png'`
+
 <h1>Features</h1>
 
 1. Fully Responsive 
