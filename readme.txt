@@ -13,10 +13,24 @@ Touch enabled wordpress plugin that lets you create beautiful responsive carouse
 
 Fully written in jQuery, touch enabled wordpress plugin based on [OWL Carousel](http://www.owlgraphic.com/owlcarousel/) that lets you create beautiful responsive carousel slider.
 
+Just create your Carousel slider from the Carousels menu & paste the following shortcode where you want to display this carousel slider:
+
+`[all-carousels]`
+
+Or you can paste following to add carousel slider to your theme:
+
+`<?php echo do_shortcode('[all-carousels]'); ?>`
+
+If you want to use multiple carousel slider at diffrent page or post at your theme write the following code:
+
+`[carousel][item img_link=""][/carousel]`
+
+Repeat `[item img_link=""]` as many image as you want. Inside `img_link=''` put you image link like `http://lorempixel.com/400/200/sports/1`
+
 <h1>Features</h1>
 
 1. Fully Responsive 
-2. Unlimited Slides
+2. Unlimited Carousel slider
 3. Supported in all major browsers
 4. Touch and Grab enabled
 5. CSS3 3D Acceleration
