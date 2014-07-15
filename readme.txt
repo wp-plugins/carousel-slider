@@ -25,7 +25,7 @@ If you want to use multiple carousel slider at diffrent page or post click on "A
 
 or write the following code:
 
-`[carousel id=""][item img_link=""][/carousel]`
+`[carousel id="unique-id"][item img_link=""][/carousel]`
 
 To change default options, you can add the following attributes:
 
