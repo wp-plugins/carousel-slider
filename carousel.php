@@ -3,7 +3,7 @@
 Plugin Name: Carousel Slider
 Plugin URI: http://wordpress.org/plugins/carousel-slider
 Description: Touch enabled wordpress plugin that lets you create beautiful responsive carousel slider.
-Version: 1.0
+Version: 1.1
 Author: Sayful Islam
 Author URI: http://sayful.net
 License: GPLv2 or later
@@ -146,7 +146,50 @@ add_action('wp_head','sis_carousel_custom_inline_style');
 
 /*Shortcode for carousel by custom button*/
 function sis_carousel_wrapper_shortcode( $atts, $content = null ) {
-    return '<div id="owl-carousel" class="owl-carousel">'.do_shortcode($content).'</div>';
+    extract(shortcode_atts(array(
+                'id' =>'carouselsc',
+                'items' =>'4',
+                'itemsDesktop' =>'4',
+                'itemsDesktopSmall' =>'4',
+                'itemsTablet' =>'3',
+                'itemsMobile' =>'2',
+                'singleItem' =>'false',
+                'slideSpeed' =>'200',
+                'paginationSpeed' =>'800',
+                'rewindSpeed' =>'1000',
+                'autoPlay' =>'true',
+                'stopOnHover' =>'true',
+                'navigation' =>'false',
+                'scrollPerPage' =>'false',
+                'pagination' =>'false',
+                'paginationNumbers' =>'false',
+                'transitionStyle' =>'fade',
+            ), $atts));   
+    return '<div id="'.$id.'" class="owl-carousel">'.do_shortcode($content).'</div>
+    		<script type="text/javascript">
+    			jQuery(document).ready(function() {
+    				jQuery("#'.$id.'").owlCarousel({
+						items : '.$items.',
+						itemsDesktop : [1199,'.$itemsDesktop.'],
+						itemsDesktopSmall : [980,'.$itemsDesktopSmall.'],
+						itemsTablet: [768,'.$itemsTablet.'],
+						itemsMobile : [479,'.$itemsMobile.'],
+						singleItem : '.$singleItem.',
+						slideSpeed : '.$slideSpeed.',
+						paginationSpeed : '.$paginationSpeed.',
+						rewindSpeed : '.$rewindSpeed.',
+						autoPlay : '.$autoPlay.',
+						stopOnHover : '.$stopOnHover.',
+						navigation : '.$navigation.',
+						navigationText : ["&lt;","&gt;"],
+						rewindNav : true,
+						scrollPerPage : '.$scrollPerPage.',
+						pagination : '.$pagination.',
+						paginationNumbers: '.$paginationNumbers.',
+						transitionStyle : "'.$transitionStyle.'",
+    				});
+    			});
+    		</script>';
 }
 add_shortcode( 'carousel', 'sis_carousel_wrapper_shortcode' );
 

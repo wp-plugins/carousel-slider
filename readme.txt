@@ -3,7 +3,7 @@ Contributors: sayful
 Tags:  carousel, carousel slider, image carousel, slider, responsive slider,
 Requires at least: 3.0
 Tested up to: 3.9.1
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,7 +25,11 @@ If you want to use multiple carousel slider at diffrent page or post click on "A
 
 or write the following code:
 
-`[carousel][item img_link=""][/carousel]`
+`[carousel id=""][item img_link=""][/carousel]`
+
+To change default options, you can add the following attributes:
+
+`[carousel id="" items="" itemsDesktop="" itemsDesktopSmall="" itemsTablet="" itemsMobile="" slideSpeed="" paginationSpeed="" rewindSpeed="" singleItem="false|true" autoPlay="false|true" stopOnHover="false|true" navigation="false|true" scrollPerPage="false|true" pagination="false|true" paginationNumbers="false|true" transitionStyle="fade|backSlide|goDown|scaleUp"][/carousel]`
 
 Repeat `[item img_link=""]` as many image as you want. Inside `img_link=''` put you image link like 
 
@@ -37,7 +41,7 @@ To get image from your WordPress Media, go to Media >> Library and click on imag
 
 Here is a complete example of code of carousel slider with ten image:
 
-`[carousel][item img_link="http://lorempixel.com/400/200/sports/1"][item img_link="http://lorempixel.com/400/200/sports/2"][item img_link="http://lorempixel.com/400/200/sports/3"][item img_link="http://lorempixel.com/400/200/sports/4"][item img_link="http://lorempixel.com/400/200/sports/5"][item img_link="http://lorempixel.com/400/200/sports/6"][item img_link="http://lorempixel.com/400/200/sports/7"][item img_link="http://lorempixel.com/400/200/sports/8"][item img_link="http://lorempixel.com/400/200/sports/9"][item img_link="http://lorempixel.com/400/200/sports/10"][/carousel]`
+`[carousel id="carousel-1"][item img_link="http://lorempixel.com/400/200/sports/1"][item img_link="http://lorempixel.com/400/200/sports/2"][item img_link="http://lorempixel.com/400/200/sports/3"][item img_link="http://lorempixel.com/400/200/sports/4"][item img_link="http://lorempixel.com/400/200/sports/5"][item img_link="http://lorempixel.com/400/200/sports/6"][item img_link="http://lorempixel.com/400/200/sports/7"][item img_link="http://lorempixel.com/400/200/sports/8"][item img_link="http://lorempixel.com/400/200/sports/9"][item img_link="http://lorempixel.com/400/200/sports/10"][/carousel]`
 
 <h1>Features</h1>
 
@@ -87,6 +91,9 @@ Do you have questions or issues with Carousel Slider? [Ask for support here](htt
 
 = version 1.0 =
 Implementation of basic functionality.
+
+== Upgrade Notice ==
+Upgrade the plugin to get more features and better performance.
 
 == CREDIT ==
 
