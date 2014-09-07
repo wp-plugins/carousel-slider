@@ -6,6 +6,8 @@ Description: Touch enabled wordpress plugin that lets you create beautiful respo
 Version: 1.1
 Author: Sayful Islam
 Author URI: http://sayful.net
+Text Domain: carouselslider
+Domain Path: /languages/
 License: GPLv2 or later
 */
 
@@ -49,6 +51,14 @@ function sis_carousel_check_WP_ver()
    }
 }
 register_activation_hook( __FILE__, 'sis_carousel_check_WP_ver' );
+
+/**
+ * Load plugin textdomain.
+ */
+function sis_carousel_load_textdomain() {
+  load_plugin_textdomain( 'carouselslider', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+}
+add_action( 'plugins_loaded', 'sis_carousel_load_textdomain' );
 
 //register settings
 function sis_carousel_settings_init(){
