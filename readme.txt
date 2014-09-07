@@ -3,7 +3,7 @@ Contributors: sayful
 Tags:  carousel, carousel slider, image carousel, slider, responsive slider,
 Requires at least: 3.0
 Tested up to: 4.0
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,19 +21,19 @@ Or you can paste following to add carousel slider to your theme:
 
 `<?php echo do_shortcode('[all-carousels]'); ?>`
 
-If you want to use multiple carousel slider at diffrent page or post click on "Add Carousel Slider" button from WordPress visual editor [view screenshot](http://s.w.org/plugins/carousel-slider/screenshot-3.png?r=943201) and inside `img_link=''` put you image link.
+If you want to use multiple carousel slider at diffrent page or post click on "Add Carousel Slider" button from WordPress visual editor [view screenshot](http://s.w.org/plugins/carousel-slider/screenshot-3.png?r=943201) and inside `img_link=''` put you image link and inside href="" put post, page or media link.
 
 or write the following code:
 
-`[carousel id="unique-id"][item img_link=""][/carousel]`
+`[carousel id="unique-id"][item href="" img_link=""][/carousel]`
 
 To change default options, you can add the following attributes:
 
 `[carousel id="" items="" itemsDesktop="" itemsDesktopSmall="" itemsTablet="" itemsMobile="" slideSpeed="" paginationSpeed="" rewindSpeed="" singleItem="false|true" autoPlay="false|true" stopOnHover="false|true" navigation="false|true" scrollPerPage="false|true" pagination="false|true" paginationNumbers="false|true" transitionStyle="fade|backSlide|goDown|scaleUp"][/carousel]`
 
-Repeat `[item img_link=""]` as many image as you want. Inside `img_link=''` put you image link like 
+Repeat `[item href="" img_link=""]` as many image as you want. Inside `img_link=''` put you image link like 
 
-`img_link='http://lorempixel.com/400/200/sports/1'`
+`img_link='http://lorempixel.com/400/200/sports/1'` and inside `href=""` put post, page or media link
 
 To get image from your WordPress Media, go to Media >> Library and click on image which one you want to insert and copy URL and paste it into `img_link=''` like this:
 
@@ -41,7 +41,7 @@ To get image from your WordPress Media, go to Media >> Library and click on imag
 
 Here is a complete example of code of carousel slider with ten image:
 
-`[carousel id="carousel-1"][item img_link="http://lorempixel.com/400/200/sports/1"][item img_link="http://lorempixel.com/400/200/sports/2"][item img_link="http://lorempixel.com/400/200/sports/3"][item img_link="http://lorempixel.com/400/200/sports/4"][item img_link="http://lorempixel.com/400/200/sports/5"][item img_link="http://lorempixel.com/400/200/sports/6"][item img_link="http://lorempixel.com/400/200/sports/7"][item img_link="http://lorempixel.com/400/200/sports/8"][item img_link="http://lorempixel.com/400/200/sports/9"][item img_link="http://lorempixel.com/400/200/sports/10"][/carousel]`
+`[carousel id="carousel-1"][item href="http://sayful.net" img_link="http://lorempixel.com/400/200/sports/1"][item img_link="http://lorempixel.com/400/200/sports/2"][item img_link="http://lorempixel.com/400/200/sports/3"][item img_link="http://lorempixel.com/400/200/sports/4"][item img_link="http://lorempixel.com/400/200/sports/5"][item img_link="http://lorempixel.com/400/200/sports/6"][item img_link="http://lorempixel.com/400/200/sports/7"][item img_link="http://lorempixel.com/400/200/sports/8"][item img_link="http://lorempixel.com/400/200/sports/9"][item img_link="http://lorempixel.com/400/200/sports/10"][/carousel]`
 
 <h1>Features</h1>
 
@@ -89,8 +89,18 @@ Do you have questions or issues with Carousel Slider? [Ask for support here](htt
 
 == Changelog ==
 
+= version 1.2 =
+
+* Fixed bugs regarding shortcode.
+* Translation ready
+
+= version 1.1 =
+
+* Fixed some bugs.
+
 = version 1.0 =
-Implementation of basic functionality.
+
+* Implementation of basic functionality.
 
 == Upgrade Notice ==
 Upgrade the plugin to get more features and better performance.
