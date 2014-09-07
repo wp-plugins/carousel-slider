@@ -92,6 +92,7 @@ Do you have questions or issues with Carousel Slider? [Ask for support here](htt
 = version 1.2 =
 
 * Fixed bugs regarding shortcode.
+* Added href="" to add link to post, page or media
 * Translation ready
 
 = version 1.1 =
