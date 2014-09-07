@@ -22,7 +22,7 @@ msgctxt "Post Type Singular Name"
 msgid "Carousel"
 msgstr ""
 
-#: carousel-img-type.php:8 carousel.php:81
+#: carousel-img-type.php:8
 msgid "Carousels"
 msgstr ""
 
