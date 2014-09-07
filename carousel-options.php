@@ -14,7 +14,7 @@
 						</th>
 						<td>
 							<input type="number" min="1" max="10" name="sis_carousel_settings[max_items]" id="" value="<?php esc_attr_e($options['max_items']); ?>">
-							<p class="description">This variable allows you to set the maximum amount of items displayed at a time with the widest browser width (window &gt;= 1200)</p>
+							<p class="description">This variable allows you to set the maximum amount of items displayed at a time with the widest browser width &#40;window &gt;= 1200&#41;</p>
 						</td>
 					</tr>
 					<tr valign="top">
@@ -23,7 +23,7 @@
 						</th>
 						<td>
 							<input type="number" min="1" max="10" name="sis_carousel_settings[items_desktop]" id="" value="<?php esc_attr_e($options['items_desktop']); ?>">
-							<p class="description">This allows you to preset the number of slides visible with  (window &lt;= 1199) browser width</p>
+							<p class="description">This allows you to preset the number of slides visible with  &#40;window &lt;= 1199&#41; browser width</p>
 						</td>
 					</tr>
 					<tr valign="top">
@@ -32,7 +32,7 @@
 						</th>
 						<td>
 							<input type="number" min="1" max="10" name="sis_carousel_settings[items_desktop_small]" id="" value="<?php esc_attr_e($options['items_desktop_small']); ?>">
-							<p class="description">This allows you to preset the number of slides visible with  (window &lt;= 979) browser width</p>
+							<p class="description">This allows you to preset the number of slides visible with  &#40;window &lt;= 979&#41; browser width</p>
 						</td>
 					</tr>
 					<tr valign="top">
@@ -41,7 +41,7 @@
 						</th>
 						<td>
 							<input type="number" min="1" max="10" name="sis_carousel_settings[items_tablet]" id="" value="<?php esc_attr_e($options['items_tablet']); ?>">
-							<p class="description">This allows you to preset the number of slides visible with  (window &lt;= 768) browser width</p>
+							<p class="description">This allows you to preset the number of slides visible with  &#40;window &lt;= 768&#41; browser width</p>
 						</td>
 					</tr>
 					<tr valign="top">
@@ -50,7 +50,7 @@
 						</th>
 						<td>
 							<input type="number" min="1" max="10" name="sis_carousel_settings[items_mobile]" id="" value="<?php esc_attr_e($options['items_mobile']); ?>">
-							<p class="description">This allows you to preset the number of slides visible with  (window &lt;= 479) browser width</p>
+							<p class="description">This allows you to preset the number of slides visible with  &#40;window &lt;= 479&#41; browser width</p>
 						</td>
 					</tr>
 					<tr valign="top">
@@ -83,7 +83,7 @@
 						</th>
 						<td>
 							<input type="number" name="sis_carousel_settings[slide_speed]" id="" value="<?php esc_attr_e($options['slide_speed']); ?>">
-							<p class="description">Slide speed in milliseconds. Default speed is '200' milliseconds.</p>
+							<p class="description">Slide speed in milliseconds. Default speed is &lsquo;200&rsquo; milliseconds.</p>
 						</td>
 					</tr>
 					<tr valign="top">
@@ -92,7 +92,7 @@
 						</th>
 						<td>
 							<input type="number" name="sis_carousel_settings[pagination_speed]" id="" value="<?php esc_attr_e($options['pagination_speed']); ?>">
-							<p class="description">Pagination speed in milliseconds. Default speed is '800' milliseconds.</p>
+							<p class="description">Pagination speed in milliseconds. Default speed is &lsquo;800&rsquo; milliseconds.</p>
 						</td>
 					</tr>
 					<tr valign="top">
@@ -101,7 +101,7 @@
 						</th>
 						<td>
 							<input type="number" name="sis_carousel_settings[rewind_speed]" id="" value="<?php esc_attr_e($options['rewind_speed']); ?>">
-							<p class="description">Rewind speed in milliseconds. Default speed is '1000' milliseconds.</p>
+							<p class="description">Rewind speed in milliseconds. Default speed is &lsquo;1000&rsquo; milliseconds.</p>
 						</td>
 					</tr>
 					<tr valign="top">
@@ -110,7 +110,7 @@
 						</th>
 						<td>
 							<input type="text" name="sis_carousel_settings[autoplay]" id="" value="<?php esc_attr_e($options['autoplay']); ?>">
-							<p class="description">Change to any integrer for example 'autoPlay : 5000' to play every 5 seconds. If you set 'autoPlay: true' default speed will be 5 seconds.</p>
+							<p class="description">Change to any integrer for example &lsquo;autoPlay : 5000&rsquo; to play every 5 seconds. If you set &lsquo;autoPlay: true&rsquo; default speed will be 5 seconds.</p>
 						</td>
 					</tr>
 					<tr valign="top">
@@ -130,7 +130,7 @@
 						<td>
 							<input type='radio' name='sis_carousel_settings[navigation]' value='false' <?php if ( 'false' == $options['navigation'] ) echo 'checked="checked"'; ?> /> NO
                             <input type='radio' name='sis_carousel_settings[navigation]' value='true' <?php if ( 'true' == $options['navigation'] ) echo 'checked="checked"'; ?> /> Yes
-							<p class="description">Display "next" and "prev" buttons.</p>
+							<p class="description">Display &lsquo;next&rsquo; and &lsquo;prev&rsquo; buttons.</p>
 						</td>
 					</tr>
 					<tr valign="top">
@@ -201,7 +201,7 @@
 					</tr>
 				</tbody>
 			</table>
-			<p class="submit"><input type="submit" value="<?php _e('Save Changes') ?>" class="button button-primary" id="submit" name="submit"></p>
+			<p class="submit"><input type="submit" value="<?php _e('Save Changes' ,'carouselslider') ?>" class="button button-primary" id="submit" name="submit"></p>
 		</form>
 	</div>
 	<div class="clear"></div>
