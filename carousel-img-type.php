@@ -3,19 +3,19 @@
 function sis_carousel_custom_post_type() {
 
 	$labels = array(
-		'name'                => _x( 'Carousels', 'Post Type General Name', 'carousel' ),
-		'singular_name'       => _x( 'Carousel', 'Post Type Singular Name', 'carousel' ),
-		'menu_name'           => __( 'Carousels', 'carousel' ),
-		'parent_item_colon'   => __( 'Parent Carousel:', 'carousel' ),
-		'all_items'           => __( 'All Carousels', 'carousel' ),
-		'view_item'           => __( 'View Carousel', 'carousel' ),
-		'add_new_item'        => __( 'Add New Carousel', 'carousel' ),
-		'add_new'             => __( 'Add New', 'carousel' ),
-		'edit_item'           => __( 'Edit Carousel', 'carousel' ),
-		'update_item'         => __( 'Update Carousel', 'carousel' ),
-		'search_items'        => __( 'Search Carousel', 'carousel' ),
-		'not_found'           => __( 'Not found', 'carousel' ),
-		'not_found_in_trash'  => __( 'Not found in Trash', 'carousel' ),
+		'name'                => _x( 'Carousels', 'Post Type General Name', 'carouselslider' ),
+		'singular_name'       => _x( 'Carousel', 'Post Type Singular Name', 'carouselslider' ),
+		'menu_name'           => __( 'Carousels', 'carouselslider' ),
+		'parent_item_colon'   => __( 'Parent Carousel:', 'carouselslider' ),
+		'all_items'           => __( 'All Carousels', 'carouselslider' ),
+		'view_item'           => __( 'View Carousel', 'carouselslider' ),
+		'add_new_item'        => __( 'Add New Carousel', 'carouselslider' ),
+		'add_new'             => __( 'Add New', 'carouselslider' ),
+		'edit_item'           => __( 'Edit Carousel', 'carouselslider' ),
+		'update_item'         => __( 'Update Carousel', 'carouselslider' ),
+		'search_items'        => __( 'Search Carousel', 'carouselslider' ),
+		'not_found'           => __( 'Not found', 'carouselslider' ),
+		'not_found_in_trash'  => __( 'Not found in Trash', 'carouselslider' ),
 	);
 	$rewrite = array(
 		'slug'                => 'carousel',
@@ -24,11 +24,10 @@ function sis_carousel_custom_post_type() {
 		'feeds'               => true,
 	);
 	$args = array(
-		'label'               => __( 'carousel', 'carousel' ),
-		'description'         => __( 'Post Type Description', 'carousel' ),
+		'label'               => __( 'Carousel', 'carouselslider' ),
+		'description'         => __( 'Carousel', 'carouselslider' ),
 		'labels'              => $labels,
-		'supports'            => array( 'title', 'thumbnail', ),
-		'taxonomies'          => array( 'category', 'post_tag' ),
+		'supports'            => array( 'title', 'editor', 'thumbnail', ),
 		'hierarchical'        => false,
 		'public'              => true,
 		'show_ui'             => true,
@@ -55,7 +54,7 @@ add_action( 'init', 'sis_carousel_custom_post_type', 0 );
 function sis_carousel_img_box()
 {
     remove_meta_box( 'postimagediv', 'carousel', 'side' );
-    add_meta_box('postimagediv', __('Upload Carousel Image'), 'post_thumbnail_meta_box', 'carousel', 'normal', 'high');
+    add_meta_box('postimagediv', __('Upload Carousel Image', 'carouselslider'), 'post_thumbnail_meta_box', 'carousel', 'normal', 'high');
 }
 add_action('do_meta_boxes', 'sis_carousel_img_box');
 

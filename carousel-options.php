@@ -1,6 +1,6 @@
 <div id="wpbody">
 	<div class="wrap">
-		<h2>Carousel Settings</h2>
+		<h2><?php _e('Carousel Settings' ,'carouselslider'); ?></h2>
 		<form action="options.php" method="post">
 			<?php
 				settings_fields( 'sis_carousel_settings' );
@@ -10,7 +10,7 @@
 				<tbody>
 					<tr valign="top">
 						<th scope="row">
-							<label for="sis_carousel_settings[max_items]">Maximum Items</label>
+							<label for="sis_carousel_settings[max_items]"><?php _e('Maximum Items' ,'carouselslider'); ?></label>
 						</th>
 						<td>
 							<input type="number" min="1" max="10" name="sis_carousel_settings[max_items]" id="" value="<?php esc_attr_e($options['max_items']); ?>">

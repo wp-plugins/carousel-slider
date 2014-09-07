@@ -78,7 +78,7 @@ add_action('init', 'sis_carousel_plugin_scripts');
 /*Plugin options page */
 
 function sis_carousel_custom_menu_page(){
-    add_options_page( 'Carousel Settings', 'Carousels', 'manage_options', 'carousel-slider/carousel-options.php');
+    add_options_page( __('Carousel Settings', 'carouselslider'), __('Carousels', 'carouselslider'), 'manage_options', 'carousel-slider/carousel-options.php');
 }
 add_action( 'admin_menu', 'sis_carousel_custom_menu_page' );
 
