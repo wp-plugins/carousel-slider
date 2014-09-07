@@ -3,7 +3,7 @@
  
         init : function(ed, url) {
             ed.addCommand('siscarouseltriger', function() {
-                return_text = '[carousel id=""][item img_link=""][item img_link=""][item img_link=""][item img_link=""][item img_link=""][/carousel]';
+                return_text = '[carousel id=""][item href="" img_link=""][item href="" img_link=""][item href="" img_link=""][item href="" img_link=""][item href="" img_link=""][/carousel]';
                 ed.execCommand('mceInsertContent', 0, return_text);
             });
 

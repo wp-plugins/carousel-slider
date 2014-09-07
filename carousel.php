@@ -149,44 +149,44 @@ function sis_carousel_wrapper_shortcode( $atts, $content = null ) {
     extract(shortcode_atts(array(
                 'id' =>'carouselsc',
                 'items' =>'4',
-                'itemsDesktop' =>'4',
-                'itemsDesktopSmall' =>'4',
-                'itemsTablet' =>'3',
-                'itemsMobile' =>'2',
-                'singleItem' =>'false',
-                'slideSpeed' =>'200',
-                'paginationSpeed' =>'800',
-                'rewindSpeed' =>'1000',
-                'autoPlay' =>'true',
-                'stopOnHover' =>'true',
+                'itemsdesktop' =>'4',
+                'itemsdesktopsmall' =>'4',
+                'itemstablet' =>'3',
+                'itemsmobile' =>'2',
+                'singleitem' =>'false',
+                'slidespeed' =>'200',
+                'paginationspeed' =>'800',
+                'rewindspeed' =>'1000',
+                'autoplay' =>'true',
+                'stoponhover' =>'true',
                 'navigation' =>'false',
-                'scrollPerPage' =>'false',
+                'scrollperpage' =>'false',
                 'pagination' =>'false',
-                'paginationNumbers' =>'false',
-                'transitionStyle' =>'fade',
+                'paginationnumbers' =>'false',
+                'transitionstyle' =>'fade',
             ), $atts));   
     return '<div id="'.$id.'" class="owl-carousel">'.do_shortcode($content).'</div>
     		<script type="text/javascript">
     			jQuery(document).ready(function() {
     				jQuery("#'.$id.'").owlCarousel({
 						items : '.$items.',
-						itemsDesktop : [1199,'.$itemsDesktop.'],
-						itemsDesktopSmall : [980,'.$itemsDesktopSmall.'],
-						itemsTablet: [768,'.$itemsTablet.'],
-						itemsMobile : [479,'.$itemsMobile.'],
-						singleItem : '.$singleItem.',
-						slideSpeed : '.$slideSpeed.',
-						paginationSpeed : '.$paginationSpeed.',
-						rewindSpeed : '.$rewindSpeed.',
-						autoPlay : '.$autoPlay.',
-						stopOnHover : '.$stopOnHover.',
+						itemsDesktop : [1199,'.$itemsdesktop.'],
+						itemsDesktopSmall : [980,'.$itemsdesktopsmall.'],
+						itemsTablet: [768,'.$itemstablet.'],
+						itemsMobile : [479,'.$itemsmobile.'],
+						singleItem : '.$singleitem.',
+						slideSpeed : '.$slidespeed.',
+						paginationSpeed : '.$paginationspeed.',
+						rewindSpeed : '.$rewindspeed.',
+						autoPlay : '.$autoplay.',
+						stopOnHover : '.$stoponhover.',
 						navigation : '.$navigation.',
 						navigationText : ["&lt;","&gt;"],
 						rewindNav : true,
-						scrollPerPage : '.$scrollPerPage.',
+						scrollPerPage : '.$scrollperpage.',
 						pagination : '.$pagination.',
-						paginationNumbers: '.$paginationNumbers.',
-						transitionStyle : "'.$transitionStyle.'",
+						paginationNumbers: '.$paginationnumbers.',
+						transitionStyle : "'.$transitionstyle.'",
     				});
     			});
     		</script>';
@@ -196,8 +196,9 @@ add_shortcode( 'carousel', 'sis_carousel_wrapper_shortcode' );
 function sis_carousel_shortcode( $atts, $content = null ) {
         extract(shortcode_atts(array(
                         'img_link' =>'',
+                        'href' =>'#',
                 ), $atts));    
-        return '<div class=""><img src="'.$img_link.'"></div>';
+        return '<div class=""><a href="'.$href.'"><img src="'.$img_link.'"></a></div>';
 }
 add_shortcode( 'item', 'sis_carousel_shortcode' );
 
