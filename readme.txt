@@ -176,3 +176,9 @@ Upgrade the plugin to get more features and better performance.
 == CONTACT ==
 
 [Sayful Islam](http://sayful1.wordpress.com/100-2/)
+
+
+== Upgrade Notice ==
+
+= 1.4.0 =
+1.4.0 is a major update. Some previous settings and shortcode will not work in this version. Check detail description befor upgrading to new version.
