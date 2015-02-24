@@ -123,11 +123,6 @@ function carousel_slider_shortcode($atts, $content=null){
 add_shortcode('carousel_slider', 'carousel_slider_shortcode');
 add_shortcode('all-carousels', 'carousel_slider_shortcode');
 
-/**add template tag- for use in themes**/
-function carousel_slider(){
-    print carousel_slider_shortcode();
-}
-
 
 add_shortcode( 'carousel', 'carousel_slider_wrapper_shortcode' );
 
