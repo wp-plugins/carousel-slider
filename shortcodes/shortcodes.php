@@ -19,8 +19,8 @@ function carousel_slider_shortcode($atts, $content=null){
         'stop_on_hover'         =>'true',
         'navigation'          	=>'true',
         'scroll_per_page'   	=>'false',
-        'pagination'          	=>'true',
-        'pagination_numbers'	=>'true',
+        'pagination'          	=>'false',
+        'pagination_numbers'	=>'false',
         'auto_height'       	=>'false',
     ), $atts));
 

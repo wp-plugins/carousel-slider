@@ -82,9 +82,9 @@ You can change default functionality by adding following optional attributes at 
 
 `scroll_per_page = 'false'` : Scroll per page not per item. This affect next/prev buttons and mouse/touch dragging.
 
-`pagination = 'true'` : Show pagination.
+`pagination = 'false'` : Show or hide pagination.
 
-`pagination_numbers = 'true'` : Show numbers inside pagination buttons
+`pagination_numbers = 'false'` : Show or hide numbers inside pagination buttons
 
 `auto_height = 'false'` : Add height to owl-wrapper-outer so you can use diffrent heights on slides. Use it only for one item per page setting.
 
