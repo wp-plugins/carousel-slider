@@ -39,7 +39,7 @@ Set category to a comma separated list of Carousel Categories Slug to only show 
 
 I am sorry that TinyMCE Button is not fully functional yet but it works well. 
 
-To add carousel slider at your page from TinyMCE visual editor and click on "Add Carousel Slider" button from WordPress visual editor [view screenshot](http://s.w.org/plugins/carousel-slider/screenshot-3.png?r=943201) and it will output the following shortcode:
+To add carousel slider at your page from TinyMCE visual editor and click on "Add Carousel Slider" button from WordPress visual editor [view screenshot](https://s.w.org/plugins/carousel-slider/screenshot-4.jpg?r=1098179) and it will output the following shortcode:
 
 `[carousel id=""]
 	[item href="" img_link=""]
