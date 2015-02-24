@@ -51,7 +51,7 @@ To add carousel slider at your page from TinyMCE visual editor and click on "Add
 
  inside `img_link=''` put you image link and inside href="" put post, page, media or any link that you want to open on click. Repeat `[item href="" img_link=""]` as many image as you want.
 
-= Change Default Functionality=
+= Change Default Functionality =
 
 You can change default functionality by adding following optional attributes at `[carousel_slider]` and `[carousel][/carousel]` shortcode
 
