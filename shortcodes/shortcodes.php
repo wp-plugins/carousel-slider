@@ -120,12 +120,6 @@ function carousel_slider_shortcode($atts, $content=null){
     ob_end_flush();
 }
 
-add_shortcode('carousel_slider', 'carousel_slider_shortcode');
-add_shortcode('all-carousels', 'carousel_slider_shortcode');
-
-
-add_shortcode( 'carousel', 'carousel_slider_wrapper_shortcode' );
-
 function carousel_slider_wrapper_shortcode($atts, $content=null){
 
     extract(shortcode_atts(array(
@@ -208,4 +202,9 @@ function sis_carousel_shortcode( $atts, $content = null ) {
 
         return '<div class=""><a target="'.$target.'" href="'.$href.'"><img src="'.$img_link.'"></a></div>';
 }
+
+add_shortcode('carousel_slider', 'carousel_slider_shortcode');
+add_shortcode('all-carousels', 'carousel_slider_shortcode');
+add_shortcode( 'carousel', 'carousel_slider_wrapper_shortcode' );
 add_shortcode( 'item', 'sis_carousel_shortcode' );
+add_filter('widget_text', 'do_shortcode');
