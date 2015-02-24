@@ -21,7 +21,7 @@ function carousel_slider_shortcode($atts, $content=null){
         'scroll_per_page'   	=>'false',
         'pagination'          	=>'true',
         'pagination_numbers'	=>'true',
-        'auto_height'       	=>'true',
+        'auto_height'       	=>'false',
     ), $atts));
 
     if (trim($category_slug) !='') {
