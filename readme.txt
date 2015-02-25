@@ -3,7 +3,7 @@ Contributors: sayful
 Tags:  carousel, carousel slider, image carousel, slider, responsive slider,
 Requires at least: 3.0
 Tested up to: 4.1
-Stable tag: 1.3
+Stable tag: 1.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,50 +13,92 @@ Touch enabled wordpress plugin that lets you create beautiful responsive carouse
 
 Fully written in jQuery, touch enabled wordpress plugin based on [OWL Carousel](http://www.owlgraphic.com/owlcarousel/) that lets you create beautiful responsive carousel slider.
 
-= Features =
+= Usage - Settings, Carousels & Carousel Categories =
 
-1. Fully Responsive 
-2. Unlimited Carousel slider
-3. Supported in all major browsers
-4. Touch and Grab enabled
-5. CSS3 3D Acceleration
-6. Multiple carousel on single page
-7. Light as a feather
+After installing or Upgrading go to `Settings >> Carousel Slider` and change the default settings as your need.
+
+Then go to `Carousels >> Add New` and fill all fields as your need and don't forget to give Carousel Categories name if you want to add multiple carousel at your site.
+
+Now go to page or post where you want to add Carousel slider and paste the following shortcode:
+
+`[carousel_slider]`
+
+You can add multiple slider at page or post by Carousel Categories slug from ( plugin version 1.4.0 ). To do this you must create Carousel Categories when you creating New Carousel. Now you can show your Carousel by categories slug. So add the following attribute to your shortcode:
+
+`category_slug=''`
+
+Set category to a comma separated list of Carousel Categories Slug to only show those. You also need to add a mandatory attribute `id=''` if you want to add multiple carousel slider at the same page or post and need to give a number manually that is unique with other carousel slider (It won't conflict with other WordPress IDs). Example:
+
+`[carousel_slider id='1' category_slug='one']`
+
+`[carousel_slider id='2' category_slug='one,two,three,four']`
 
 
-= Single Carousel Slider for a site =
 
-Just create your Carousel slider from the Carousels menu & paste the following shortcode where you want to display this carousel slider:
+= Usage - TinyMCE Button =
 
-`[all-carousels]`
+I am sorry that TinyMCE Button is not fully functional yet but it works well. 
 
-Or you can paste following to add carousel slider to your theme:
+To add carousel slider at your page from TinyMCE visual editor and click on "Add Carousel Slider" button from WordPress visual editor [view screenshot](https://s.w.org/plugins/carousel-slider/screenshot-4.jpg?r=1098179) and it will output the following shortcode:
 
-`<?php echo do_shortcode('[all-carousels]'); ?>`
+`[carousel id=""]
+	[item href="" img_link=""]
+	[item href="" img_link=""]
+	[item href="" img_link=""]
+	[item href="" img_link=""]
+	[item href="" img_link=""]
+[/carousel]`
 
-= Multiple Carousel Slider for a site =
+ inside `img_link=''` put you image link and inside href="" put post, page, media or any link that you want to open on click. Repeat `[item href="" img_link=""]` as many image as you want.
 
-If you want to use multiple carousel slider at diffrent page or post click on "Add Carousel Slider" button from WordPress visual editor [view screenshot](http://s.w.org/plugins/carousel-slider/screenshot-3.png?r=943201) and inside `img_link=''` put you image link and inside href="" put post, page or media link.
+= Change Default Functionality =
 
-or write the following code:
+You can change default functionality by adding following optional attributes at `[carousel_slider]` and `[carousel][/carousel]` shortcode
 
-`[carousel id="unique-id"][item href="" img_link=""][/carousel]`
 
-To change default options, you can add the following attributes:
+`items = '4'` : to set the maximum amount of items displayed at a time with the widest browser width (window >= 1200)
 
-`[carousel id="" items="" itemsDesktop="" itemsDesktopSmall="" itemsTablet="" itemsMobile="" slideSpeed="" paginationSpeed="" rewindSpeed="" singleItem="false|true" autoPlay="false|true" stopOnHover="false|true" navigation="false|true" scrollPerPage="false|true" pagination="false|true" paginationNumbers="false|true" transitionStyle="fade|backSlide|goDown|scaleUp"][/carousel]`
+`items_desktop = '4'` : This allows you to preset the number of slides visible with (window <= 1199) browser width
 
-Repeat `[item href="" img_link=""]` as many image as you want. Inside `img_link=''` put you image link like 
+`items_desktop_small = '3'` : This allows you to preset the number of slides visible with (window <= 979) browser width
 
-`img_link='http://lorempixel.com/400/200/sports/1'` and inside `href=""` put post, page or media link
+`items_tablet = '2'` : This allows you to preset the number of slides visible with (window <= 768) browser width
 
-To get image from your WordPress Media, go to Media >> Library and click on image which one you want to insert and copy URL and paste it into `img_link=''` like this:
+`items_mobile = '1'` : This allows you to preset the number of slides visible with (window <= 479) browser width
 
-`img_link='http://localhost/wp/plugins/wp-content/uploads/2014/06/vlcsnap-2014-06-08-14h31m10s128.png'`
+`single_item = 'false'` : If you set true, it will display only one item
 
-= Here is a complete example of code of carousel slider with ten image: =
+`slide_speed = '200'` : Slide speed in milliseconds
 
-`[carousel id="carousel-1"][item href="http://sayful.net" img_link="http://lorempixel.com/400/200/sports/1"][item img_link="http://lorempixel.com/400/200/sports/2"][item img_link="http://lorempixel.com/400/200/sports/3"][item img_link="http://lorempixel.com/400/200/sports/4"][item img_link="http://lorempixel.com/400/200/sports/5"][item img_link="http://lorempixel.com/400/200/sports/6"][item img_link="http://lorempixel.com/400/200/sports/7"][item img_link="http://lorempixel.com/400/200/sports/8"][item img_link="http://lorempixel.com/400/200/sports/9"][item img_link="http://lorempixel.com/400/200/sports/10"][/carousel]`
+`pagination_speed = '800'` : Pagination speed in milliseconds
+
+`rewind_speed = '1000'` : Rewind speed in milliseconds
+
+`auto_play = 'true'` : Change to any integrer for example auto_play : 5000 to play every 5 seconds. If you set auto_play: true default speed will be 5 seconds.
+
+`stop_on_hover = 'true'` : Stop autoplay on mouse hover
+
+`navigation = 'true'` : Display "next" and "prev" buttons.
+
+`scroll_per_page = 'false'` : Scroll per page not per item. This affect next/prev buttons and mouse/touch dragging.
+
+`pagination = 'false'` : Show or hide pagination.
+
+`pagination_numbers = 'false'` : Show or hide numbers inside pagination buttons
+
+`auto_height = 'false'` : Add height to owl-wrapper-outer so you can use diffrent heights on slides. Use it only for one item per page setting.
+
+Example 1(Settings, Carousels & Carousel Categories):
+
+`[carousel_slider id='1' category_slug='portfolio,two' items = '3' navigation = 'false']`
+
+Example 2:
+
+`[carousel id=''  items = '3' navigation = 'false' slide_speed = '400']
+	[item href='' img_link='']
+	[item href='' img_link='']
+[/carousel]`
+
 
 
 == Installation ==
@@ -88,12 +130,22 @@ Do you have questions or issues with Carousel Slider? [Ask for support here](htt
 
 == Screenshots ==
 
-1. Screenshot of Carousels custom post.
-2. Screenshot of Options page.
-3. Screenshot of Carousel shortcode button.
-4. Screenshot of Carousel Front-end Example.
+1. Screenshot of Carousel Slider Settings page
+2. Screenshot of Carousel Custom Post Type (Add New Carousel)
+3. Screenshot of Carousel Custom Post Type Categories
+4. Screenshot of Carousel shortcode button.
+5. Screenshot of Carousel Front-end Example.
 
 == Changelog ==
+
+= version 1.4.0 =
+
+* Added option to add custom image size
+* Added option to link each slide to a URL
+* Added option to open link in the same frame as it was clicked or in a new window or tab.
+* Added feature to add multiple slider at page, post or theme by custom post category slug
+* Re-write with Object-oriented programming (OOP)
+
 
 = version 1.3 =
 
@@ -124,3 +176,8 @@ Upgrade the plugin to get more features and better performance.
 == CONTACT ==
 
 [Sayful Islam](http://sayful1.wordpress.com/100-2/)
+
+
+== Upgrade Notice ==
+
+1.4.0 is a major update. Some previous settings and shortcode will not work in this version. Check detail description befor upgrading to new version.
