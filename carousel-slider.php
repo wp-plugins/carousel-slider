@@ -3,7 +3,7 @@
 Plugin Name: 	Carousel Slider
 Plugin URI: 	http://wordpress.org/plugins/carousel-slider
 Description: 	Touch enabled wordpress plugin that lets you create beautiful responsive carousel slider.
-Version: 		1.4.0
+Version: 		1.4.1
 Author: 		Sayful Islam
 Author URI: 	http://sayful.net
 Text Domain: 	carouselslider

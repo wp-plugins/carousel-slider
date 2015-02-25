@@ -11,7 +11,7 @@ class Carousel_Slider {
 	public function __construct() {
 
 		$this->plugin_name = 'carousel-slider';
-		$this->version = '1.4.0';
+		$this->version = '1.4.1';
 
 		$this->load_dependencies();
 		$this->set_locale();

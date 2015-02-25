@@ -3,7 +3,7 @@ Contributors: sayful
 Tags:  carousel, carousel slider, image carousel, slider, responsive slider,
 Requires at least: 3.0
 Tested up to: 4.1
-Stable tag: 1.4.0
+Stable tag: 1.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -137,6 +137,10 @@ Do you have questions or issues with Carousel Slider? [Ask for support here](htt
 5. Screenshot of Carousel Front-end Example.
 
 == Changelog ==
+
+= version 1.4.1 =
+
+* Fixed bug regarding options page save options
 
 = version 1.4.0 =
 
