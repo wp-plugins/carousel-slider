@@ -12,7 +12,9 @@ class Carousel_Slider_Settings {
     {
         add_action( 'admin_menu', array( $this, 'add_plugin_page' ) );
         add_action( 'admin_init', array( $this, 'page_init' ) );
+
         register_activation_hook( __FILE__, array( $this, 'default_options' ));
+        
         $this->options = get_option('sis_carousel_settings');
 
 
