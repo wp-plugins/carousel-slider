@@ -39,17 +39,17 @@ class Carousel_Slider_Public {
 		?><style>
 		.owl-buttons,
 		.owl-theme .owl-controls .owl-page span.owl-numbers {
-			color: <?php echo $this->options['btn_color']; ?>;
+			color: <?php echo (isset($this->options['btn_color'])) ? $this->options['btn_color'] : '#dddddd'; ?>;
 		}
 		.owl-theme .owl-buttons .owl-prev,
 		.owl-theme .owl-buttons .owl-next,
 		.owl-theme .owl-controls .owl-page span{
-			background: <?php echo $this->options['btn_bg_color']; ?>;
+			background: <?php echo (isset($this->options['btn_bg_color'])) ? $this->options['btn_bg_color'] : '#666666'; ?>;
 		}
 		.owl-theme .owl-buttons .owl-prev,
 		.owl-theme .owl-buttons .owl-next,
 		.owl-theme .owl-controls .owl-page span{
-			opacity: <?php echo $this->options['btn_opacity']; ?>;
+			opacity: <?php echo (isset($this->options['btn_opacity'])) ? $this->options['btn_opacity'] : '.4'; ?>;
 		}
 		</style><?php
 	}

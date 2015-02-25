@@ -19,8 +19,8 @@ function carousel_slider_shortcode($atts, $content=null){
         'stop_on_hover'         =>'true',
         'navigation'          	=>'true',
         'scroll_per_page'   	=>'false',
-        'pagination'          	=>'false',
-        'pagination_numbers'	=>'false',
+        'pagination'          	=>'true',
+        'pagination_numbers'	=>'true',
         'auto_height'       	=>'false',
     ), $atts));
 
@@ -48,8 +48,9 @@ function carousel_slider_shortcode($atts, $content=null){
         query_posts("post_type=carousel&posts_per_page=-1&carousel_category=$termname");
         if (have_posts()) : while (have_posts()) : the_post();
         
+        $image_size = (isset($options['image_size'])) ? $options['image_size'] : 'full';
 
-        $img= get_the_post_thumbnail( $post->ID, $options['image_size'] );
+        $img= get_the_post_thumbnail( $post->ID, $image_size );
 
 
         $carousel_link = get_post_meta( $post->ID, '_carousel_slider_slide_link_value', true );

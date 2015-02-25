@@ -12,9 +12,7 @@ class Carousel_Slider_Settings {
     {
         add_action( 'admin_menu', array( $this, 'add_plugin_page' ) );
         add_action( 'admin_init', array( $this, 'page_init' ) );
-
         register_activation_hook( __FILE__, array( $this, 'default_options' ));
-        
         $this->options = get_option('sis_carousel_settings');
 
 
@@ -32,7 +30,7 @@ class Carousel_Slider_Settings {
             'btn_opacity'       => '0.4',
         );
 
-        if ( get_option( 'sis_carousel_settings' ) !== false ) {
+        if ( $this->options !== false ) {
 
             update_option( 'sis_carousel_settings', $options_array );
 
@@ -195,10 +193,10 @@ class Carousel_Slider_Settings {
     function image_size_callback() {
 
         $values = array(
-            'thumbnail'     => 'Thumbnail (default 150px x 150px max)',
-            'medium'        => 'Medium resolution (default 300px x 300px max)',
-            'large'         => 'Large resolution (default 640px x 640px max)',
             'full'          => 'Full resolution (original size uploaded)',
+            'large'         => 'Large resolution (default 640px x 640px max)',
+            'medium'        => 'Medium resolution (default 300px x 300px max)',
+            'thumbnail'     => 'Thumbnail (default 150px x 150px max)',
             'carousel-thumb'=> 'Use custom image size',
         );
 
@@ -225,8 +223,9 @@ class Carousel_Slider_Settings {
         );
 
         ?>
-        <input type='number' class='small-text' name='sis_carousel_settings[img_width]' id='img_width' value='<?php echo $this->options['img_width']; ?>'>
-        <input type='number' class='small-text' name='sis_carousel_settings[img_height]' id='img_height' value='<?php echo $this->options['img_height']; ?>'>
+        <input type='number' class='small-text' name='sis_carousel_settings[img_width]' id='img_width' value='<?php echo (isset($this->options['img_width'])) ? $this->options['img_width'] : '0'; ?>'>
+        
+        <input type='number' class='small-text' name='sis_carousel_settings[img_height]' id='img_height' value='<?php echo (isset($this->options['img_height'])) ? $this->options['img_height'] : '0'; ?>'>
         <select id='img_crop' name='sis_carousel_settings[img_crop]'>
             <?php
                 foreach($values as $code => $label) :
@@ -242,21 +241,21 @@ class Carousel_Slider_Settings {
 
     public function btn_bg_color_callback(){
         ?>
-        <input type="text" name="sis_carousel_settings[btn_bg_color]" id="btn_bg_color" data-default-color="#666666" value="<?php echo $this->options['btn_bg_color']; ?>">
+        <input type="text" name="sis_carousel_settings[btn_bg_color]" id="btn_bg_color" data-default-color="#666666" value="<?php echo (isset($this->options['btn_bg_color'])) ? $this->options['btn_bg_color'] : '#666666'; ?>">
         <p><?php _e( 'Choose carousel navigation background color.', 'sandbox' ); ?></p>
         <?php
     }
 
     public function btn_color_callback(){
         ?>
-        <input type="text" name="sis_carousel_settings[btn_color]" id="btn_color" data-default-color="#dddddd" value="<?php echo $this->options['btn_color']; ?>">
+        <input type="text" name="sis_carousel_settings[btn_color]" id="btn_color" data-default-color="#dddddd" value="<?php echo (isset($this->options['btn_color'])) ? $this->options['btn_color'] : '#dddddd'; ?>">
         <p><?php _e( 'Choose carousel navigation color.', 'sandbox' ); ?></p>
         <?php
     }
 
     public function btn_opacity_callback(){
         ?>
-        <input type="text" class="small-text" name="sis_carousel_settings[btn_opacity]" id="btn_opacity" value="<?php echo $this->options['btn_opacity']; ?>">
+        <input type="text" class="small-text" name="sis_carousel_settings[btn_opacity]" id="btn_opacity" value="<?php echo (isset($this->options['btn_opacity'])) ? $this->options['btn_opacity'] : '.4'; ?>">
         <p><?php _e( 'Enter button opacity value. min value is 0 and max value is 1. Example 0.2', 'sandbox' ); ?></p>
         <?php
     }

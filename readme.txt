@@ -3,7 +3,7 @@ Contributors: sayful
 Tags:  carousel, carousel slider, image carousel, slider, responsive slider,
 Requires at least: 3.0
 Tested up to: 4.1
-Stable tag: 1.4.0
+Stable tag: 1.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -82,9 +82,9 @@ You can change default functionality by adding following optional attributes at 
 
 `scroll_per_page = 'false'` : Scroll per page not per item. This affect next/prev buttons and mouse/touch dragging.
 
-`pagination = 'false'` : Show or hide pagination.
+`pagination = 'true'` : Show pagination.
 
-`pagination_numbers = 'false'` : Show or hide numbers inside pagination buttons
+`pagination_numbers = 'true'` : Show numbers inside pagination buttons
 
 `auto_height = 'false'` : Add height to owl-wrapper-outer so you can use diffrent heights on slides. Use it only for one item per page setting.
 
@@ -137,10 +137,6 @@ Do you have questions or issues with Carousel Slider? [Ask for support here](htt
 5. Screenshot of Carousel Front-end Example.
 
 == Changelog ==
-
-= version 1.4.1 =
-
-* Fixed bug regarding options page save options
 
 = version 1.4.0 =
 
