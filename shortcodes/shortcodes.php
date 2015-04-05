@@ -118,7 +118,7 @@ function carousel_slider_shortcode($atts, $content=null){
         })
     </script>
     <?php
-    ob_get_clean();
+    return ob_get_clean();
 }
 
 function carousel_slider_wrapper_shortcode($atts, $content=null){
@@ -191,7 +191,7 @@ function carousel_slider_wrapper_shortcode($atts, $content=null){
         })
     </script>
     <?php
-    ob_get_clean();
+    return ob_get_clean();
 }
 
 function sis_carousel_shortcode( $atts, $content = null ) {
